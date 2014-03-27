@@ -180,7 +180,7 @@ $config['asset_group']['blueimp'] = 'blueimp-gallery.min|blueimp-galleryjs.min|b
 $config['asset'][] = array('file'=>'photobox.css');
 $config['asset'][] = array('file'=>'jquery.photobox.js', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'jquery.photobox.init.js', 'needs'=>'jquery.photobox');
-$config['asset_group']['blueimp'] = 'photobox|jquery.photobox.init|jquery.photobox';
+$config['asset_group']['photobox'] = 'photobox|jquery.photobox.init|jquery.photobox';
 
 
 // flot.js

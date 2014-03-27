@@ -250,6 +250,7 @@ hr { background:none; height:0px; border:0px; border-top:0px solid #ffffff; }
 }
 #header img {
 	margin:0px 10px;
+        z-index:-100;
 }
 #header td.headerlinks { /* mini cart */
 	width:300px;

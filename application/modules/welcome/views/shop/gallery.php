@@ -34,22 +34,15 @@
     </div>
   </div>
 </div>
+<?php  $this->load->view($this->config->item('backendpro_template_shop') . 'inc/gallerypart'); ?>
 
-<div id="links">
-<?php
 
-  foreach ($galleryimages as $image)
-  {
-  $imageinfo = $image['image'];
-  $thumbnail=convert_image_path($imageinfo);
-  $imagelink=base_url().$thumbnail;
-  echo '<a href="' .$imagelink. '" title="'.$image['shortdesc'].'" data-gallery>';
-    echo "<img src='".$imagelink."' width='125' height='115'>";
-    echo "\n</a>\n";
-  }
+<?php elseif($galleryname =="photobox"): ?>
 
-  ?>
-</div>
+<!--[if lt IE 9]><link rel="stylesheet" href="assets/css/photobox.ie.css"><![endif]-->
+
+<?php  $this->load->view($this->config->item('backendpro_template_shop') . 'inc/gallerypart'); ?>
+
 
 <?php elseif($galleryname =="blueimp"): ?>
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
@@ -63,40 +56,12 @@
     <ol class="indicator"></ol>
 </div>
 
+<?php  $this->load->view($this->config->item('backendpro_template_shop') . 'inc/gallerypart'); ?>
 
-
-<div id="links">
-  <?php
-
-  foreach ($galleryimages as $image)
-  {
-  $imageinfo = $image['image'];
-  $thumbnail=convert_image_path($imageinfo);
-  $imagelink=base_url().$thumbnail;
-  echo '<a href="' .$imagelink. '" title="'.$image['shortdesc'].'" data-gallery>';
-    echo "<img src='".$imagelink."' width='125' height='115'>";
-    echo "\n</a>\n";
-  }
-
-  ?>
-
-</div>
 <?php else: ?>
-<div class="popup-gallery">
-  <?php
 
-  foreach ($galleryimages as $image)
-  {
-  $imageinfo = $image['image'];
-  $thumbnail=convert_image_path($imageinfo);
-  $imagelink=base_url().$thumbnail;
-  echo '<a class="group1" href="' .$imagelink. '" title="'.$image['shortdesc'].'">';
-    echo "<img src='".$imagelink."' width='125' height='115'>";
-    echo "\n</a>\n";
-  }
+<?php  $this->load->view($this->config->item('backendpro_template_shop') . 'inc/gallerypart'); ?>
 
-  ?>
-</div>
 <?php endif; ?>
 
 <?php
