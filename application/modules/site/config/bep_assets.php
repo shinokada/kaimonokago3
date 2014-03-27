@@ -176,13 +176,11 @@ $config['asset'][] = array('file'=>'blueimp-galleryjs.min.js', 'needs'=>'jquery'
 $config['asset'][] = array('file'=>'blueimp-gallery.init.js', 'needs'=>'blueimp-galleryjs.min');
 $config['asset_group']['blueimp'] = 'blueimp-gallery.min|blueimp-galleryjs.min|blueimp-gallery.init';
 
-
-
-
-// jQuery Zoomooz
-
-
-
+// Photobox
+$config['asset'][] = array('file'=>'photobox.css');
+$config['asset'][] = array('file'=>'jquery.photobox.js', 'needs'=>'jquery');
+$config['asset'][] = array('file'=>'jquery.photobox.init.js', 'needs'=>'jquery.photobox');
+$config['asset_group']['blueimp'] = 'photobox|jquery.photobox.init|jquery.photobox';
 
 
 // flot.js

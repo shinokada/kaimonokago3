@@ -26,7 +26,7 @@ echo "<td>";
 echo form_input($data);
 echo "</td></tr>\n";
 
-echo "<tr><td class='label'><label for='shortlang'>Short language</label></td>\n";
+echo "<tr><td class='label'><label for='shortlang'>Abbreviation used for html5 head tag</label></td>\n";
 $shortlang= array('name'=>'short_lang','id'=>'short_lang','class'=>'text');
 echo "<td>";
 echo form_input($shortlang);
