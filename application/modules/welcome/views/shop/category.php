@@ -63,3 +63,5 @@ print_r ($this->data['lang_id']);
 echo "</pre>";
 
 }
+
+?>

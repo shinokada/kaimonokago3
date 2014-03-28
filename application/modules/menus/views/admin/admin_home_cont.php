@@ -46,15 +46,6 @@ function generateRowsByLevel($navlist, &$output, $depth = 0,$pages,$languages, $
          */
         $output .= " valign='top'>\n";
         $output .= "<td>". $list['id']."</td>\n";
-        /*
-        if($list['lang_id']==0){
-            // for English
-            $output .= "<td class=\"" . $depthClassMapping[$depth] . "\"><a href=\"". site_url(). '/menus/admin/edit/' .  $list['id'] .'/'.$list['page_uri_id'].'/'.$list['lang_id']. '">' . $list['name']."</a></td>\n";
-        }else{
-            // for other language
-            $output .= "<td class=\"" . $depthClassMapping[$depth] . "\"><a href=\"". site_url(). '/menus/admin/edit/' .  $list['menu_id'] .'/'.$list['page_uri_id'].'/'.$list['lang_id'].'/'.$list['id']. '">' . $list['name']."</a></td>\n";
-        }
-        */
         $output .= "<td class=\"" . $depthClassMapping[$depth] . "\"><a href=\"". site_url(). '/menus/admin/edit/';
         ($list['lang_id']==0)? $output .=$list['id'] : $output .= $list['menu_id'];
         $output .='/'.$list['page_uri_id'].'/'.$list['lang_id'];

@@ -1,14 +1,12 @@
-# file named .gitignore
+*/config/database.php
+*/config/config.php
+sparks/oauth2/config/authconfig.php
+sparks/GoogleCalendar/1.0.3/config/gcalconfig.php
+sparks/GoogleAPIClient/0.6.0/src/config.php
+sparks/GoogleAPIClient/0.5.0/src/config.php
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
 
-# application/config/database.php
-# application/config/config.php
-application/logs/
-application/cache/
-application/modules/recaptcha/config/recaptcha.php
-sublime/
-system/cache/
-# Vim leave-behinds
-*.swp
-
-# Windows files
-*.bak
