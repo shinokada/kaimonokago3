@@ -230,7 +230,6 @@ class Manage extends Shop_Admin_Controller
       // $this->session->set_flashdata('message','Page updated');
       // But here we use Bep way to display flash msg
       flashMsg('success',$this->lang->line('kago_translation_added'));
-      //redirect($this->module.'/manage/index/'.$category_id,'refresh');
       redirect($this->module.'/admin/index/','refresh');
     }
     else

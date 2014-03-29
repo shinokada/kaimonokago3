@@ -132,7 +132,9 @@ $config['asset'][] = array('file'=>'coin-slider.min.js', 'needs'=>'jquery');
 
 // jquery.nivo.slider
 $config['asset'][] = array('file'=>'nivo-slider.css');
+$config['asset'][] = array('file'=>'nivo-slider-default-theme.css');
 $config['asset'][] = array('file'=>'jquery.nivo.slider.pack.js', 'needs'=>'jquery');
+$config['asset'][] = array('file'=>'jquery.nivo.slider.init.js', 'needs'=>'jquery.nivo.slider.pack');
 
 // jmpress
 $config['asset'][] = array('file'=>'jmpress.min.js', 'needs'=>'jquery');
@@ -243,7 +245,7 @@ $config['asset_group']['unmaskpassword'] = "unmaskpassword";
 $config['asset_group']['cu3er'] = "cu3er";
 $config['asset_group']['interfade'] = "jquery.innerfade";
 $config['asset_group']['coinslider'] = "coin-slider.min|coin-slider-styles";
-$config['asset_group']['nivoslider'] = "jquery.nivo.slider.pack|nivo-slider";
+$config['asset_group']['nivoslider'] = "jquery.nivo.slider.pack|nivo-slider|jquery.nivo.slider.init|nivo-slider-default-theme";
 $config['asset_group']['jmpress'] = "jmpress.min|jquery.jmslideshow|jmpress_style";
 
 // Image gallery assets
