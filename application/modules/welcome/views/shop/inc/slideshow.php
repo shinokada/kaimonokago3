@@ -41,12 +41,11 @@ if($this->preference->item('webshop_slideshow')=="jmpress")
 }
 elseif($this->preference->item('webshop_slideshow')=="nivoslider")
 {
-  echo "<h1>Nivoslider</h1>";
   if(!empty($slides))
   {
     echo '<div class="slider-wrapper theme-default">
-    <div class="ribbon"></div>
-    <div id="slideshow" class="nivoSlider pics">';
+      <div class="ribbon"></div>
+      <div id="slideshow" class="nivoSlider pics">';
     foreach ($slides as $slide)
     {
       $imageinfo = $slide['image'];
@@ -58,7 +57,45 @@ elseif($this->preference->item('webshop_slideshow')=="nivoslider")
     echo "</div>";
   }
 }
-else
+elseif($this->preference->item('webshop_slideshow')=="blueimpslide")
+{
+  echo '<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    </div>';
+  echo '<div id="links">';
+  foreach ($slides as $slide)
+  {
+    $imageinfo = $slide['image'];
+    $slideimg=convert_image_path($imageinfo);
+    echo '<a href="'.$slideimg.'" >';
+    echo "<img class='hideme' src='".$slideimg."'>";
+    echo "\n</a>\n";
+  }
+  echo "</div>";
+}
+elseif($this->preference->item('webshop_slideshow')=="slidejs")
+{
+  if(!empty($slides))
+  {
+    echo "<div id=\"slides\">";
+    foreach ($slides as $slide)
+    {
+      $imageinfo = $slide['image'];
+      $slideimg=convert_image_path($imageinfo);
+      echo '<img class="" src="'. $slideimg. '" alt="' . $slide['name'] .
+        '" />';
+    }
+    echo '<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="fa fa-chevron-left icon-large"></i></a>
+      <a href="#" class="slidesjs-next slidesjs-navigation"><i class="fa fa-chevron-right icon-large"></i></a>';
+    echo "</div>";
+  }
+}
+  else
 {
   if(!empty($slides))
   {

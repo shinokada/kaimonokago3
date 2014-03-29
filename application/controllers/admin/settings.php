@@ -107,8 +107,8 @@ class Settings extends Admin_Controller
     $config['field']['security_answer'] = array('rules'=>'trim');
 
     // for slideshows 
-    $config['field']['webshop_slideshow'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'jmpress'=>"jmpress",'interfade'=>$this->lang->line('userlib_interfade'),'cu3er'=>$this->lang->line('userlib_cu3er'),'coinslider'=>$this->lang->line('userlib_coin_slider'),'nivoslider'=>$this->lang->line('userlib_nivo_slider'))));
-    $config['field']['slideshow_two'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'jmpress'=>"jmpress",'interfade'=>$this->lang->line('userlib_interfade'),'cu3er'=>$this->lang->line('userlib_cu3er'),'coinslider'=>$this->lang->line('userlib_coin_slider'),'nivoslider'=>$this->lang->line('userlib_nivo_slider'))));
+    $config['field']['webshop_slideshow'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'slidejs'=>'SlideJS','blueimpslide'=>'Blueimp Sldeshow','jmpress'=>"jmpress",'cu3er'=>$this->lang->line('userlib_cu3er'),'coinslider'=>$this->lang->line('userlib_coin_slider'),'nivoslider'=>$this->lang->line('userlib_nivo_slider'))));
+    $config['field']['slideshow_two'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'slidejs'=>'SlideJS','blueimpslide'=>'Blueimp Slideshow','jmpress'=>"jmpress",'cu3er'=>$this->lang->line('userlib_cu3er'),'coinslider'=>$this->lang->line('userlib_coin_slider'),'nivoslider'=>$this->lang->line('userlib_nivo_slider'))));
     
     // image gallery
     $config['field']['image_gallery'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'colorbox1'=>"Color Box 1",'colorbox2'=>"Color Box 2",'colorbox3'=>"Color Box 3",'colorbox4'=>"Color Box 4",'colorbox5'=>"Color Box 5",'blueimp'=>"Blueimp Gallery",'photobox'=>"Photobox", 'magnific'=>"Magnific Popup",'bootstrap-image-gallery'=>"Bootstrap Image Gallery")));

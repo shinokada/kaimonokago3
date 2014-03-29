@@ -113,8 +113,6 @@ $config['asset'][] = array('file'=>'webshop.css');
 $config['asset'][] = array('file'=>'shop.init.js');// need to be at the end	
 // delete item or recalculate
 $config['asset'][] = array('file'=>'shopcustomtools.js', 'needs'=>'jquery');
-// menu, slideshow for the front page
-$config['asset'][] = array('file'=>'jquery.innerfade.js', 'needs'=>'jquery');	
 // browser detect js
 // $config['asset'][] = array('file'=>'browserDetect-min.js', 'needs'=>'jquery');
 
@@ -125,22 +123,33 @@ $config['asset'][] = array('file'=>'tinymce.init.js', 'needs'=>'tiny_mce');
 
 // cu3er slideshow. since appending some html we need jquery
 $config['asset'][] = array('file'=>'cu3er.js', 'needs'=>'jquery');
+$config['asset_group']['cu3er'] = "cu3er";
 
 // coin-slider
 $config['asset'][] = array('file'=>'coin-slider-styles.css');
 $config['asset'][] = array('file'=>'coin-slider.min.js', 'needs'=>'jquery');
+$config['asset_group']['coinslider'] = "coin-slider.min|coin-slider-styles";
 
 // jquery.nivo.slider
 $config['asset'][] = array('file'=>'nivo-slider.css');
 $config['asset'][] = array('file'=>'nivo-slider-default-theme.css');
 $config['asset'][] = array('file'=>'jquery.nivo.slider.pack.js', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'jquery.nivo.slider.init.js', 'needs'=>'jquery.nivo.slider.pack');
+$config['asset_group']['nivoslider'] = "jquery.nivo.slider.pack|nivo-slider|jquery.nivo.slider.init|nivo-slider-default-theme";
 
 // jmpress
 $config['asset'][] = array('file'=>'jmpress.min.js', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'jquery.jmslideshow.js', 'needs'=>'jmpress.min');
 $config['asset'][] = array('file'=>'jmpress_style.css');
-//$config['asset'][] = array('file'=>'normalize.css');
+$config['asset_group']['jmpress'] = "jmpress.min|jquery.jmslideshow|jmpress_style";
+
+//slidejs
+$config['asset'][] = array('file'=>'font-awesome.min.css');
+$config['asset'][] = array('file'=>'slidejs.css');
+$config['asset'][] = array('file'=>'jquery.slides.min.js', 'needs'=>'jquery');
+$config['asset'][] = array('file'=>'jquery.slidesjs.init.js', 'needs'=>'jquery.slides.min');
+$config['asset_group']['slidejs'] = "jquery.slides.min|font-awesome.min|slidejs|jquery.slidesjs.init";
+
 
 // Image gallery
 // magnific popup
@@ -177,6 +186,11 @@ $config['asset'][] = array('file'=>'blueimp--gallery.min.css');
 $config['asset'][] = array('file'=>'blueimp-galleryjs.min.js', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'blueimp-gallery.init.js', 'needs'=>'blueimp-galleryjs.min');
 $config['asset_group']['blueimp'] = 'blueimp-gallery.min|blueimp-galleryjs.min|blueimp-gallery.init';
+
+//blueimpslide
+$config['asset'][] = array('file'=>'blueimpslide.init.js', 'needs'=>'blueimp-galleryjs.min');
+$config['asset_group']['blueimpslide'] = 'blueimp-gallery.min|blueimp-galleryjs.min|blueimpslide.init';
+
 
 // Photobox
 $config['asset'][] = array('file'=>'photobox.css');
@@ -243,7 +257,6 @@ $config['asset_group']['unmaskpassword'] = "unmaskpassword";
 // Slideshow groups. There are two kinds of slideshows are implemented
 // cu3er group
 $config['asset_group']['cu3er'] = "cu3er";
-$config['asset_group']['interfade'] = "jquery.innerfade";
 $config['asset_group']['coinslider'] = "coin-slider.min|coin-slider-styles";
 $config['asset_group']['nivoslider'] = "jquery.nivo.slider.pack|nivo-slider|jquery.nivo.slider.init|nivo-slider-default-theme";
 $config['asset_group']['jmpress'] = "jmpress.min|jquery.jmslideshow|jmpress_style";

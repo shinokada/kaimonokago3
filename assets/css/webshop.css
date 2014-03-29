@@ -2722,3 +2722,7 @@ this:
 #pagecont{
 
 }
+
+.hideme{
+  display:none;
+}

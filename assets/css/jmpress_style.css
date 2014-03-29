@@ -1,10 +1,10 @@
 .jms-slideshow {
 	position: relative;
 	width: 80%;
-	max-width: 1400px;
-	min-width: 500px;
+	max-width: 520px;
+	min-width: 520px;
 	/*margin: 20px auto;*/
-	height: 200px;
+	height: 220px;
 	 margin-bottom: 30px;
 }
 .jms-wrapper {
@@ -46,8 +46,8 @@
 	background-color: rgba(193, 230, 229, 1);
 }
 .step {	
-	width: 900px;
-    height: 420px;
+	width: 500px;
+    height: 250px;
 	display: block;
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
@@ -61,13 +61,13 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
 }
 .jms-content{
-	margin: 0px 370px 0px 20px;
+	margin: 0px 270px 0px 20px;
 	position: relative;
 	clear: both;
 }
 .step h3{
 	color: #fff;
-	font-size: 52px;
+	font-size: 22px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	margin: 0;
@@ -76,10 +76,10 @@
 .step p {
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	font-size: 34px;
+	font-size: 14px;
 	font-weight: normal;
 	position: relative;
-	line-height:40px;
+	line-height:16px;
 	margin: 0;
 }
 a.jms-link{
