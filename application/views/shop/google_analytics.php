@@ -1,3 +1,7 @@
+<?php 
+print $this->bep_assets->get_footer_assets();
+// this will print all the js
+if ($this->preference->item('ga_tracking')):?>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -11,3 +15,5 @@
   })();
 
 </script>
+
+<?php endif; ?>
