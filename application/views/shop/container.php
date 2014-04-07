@@ -7,6 +7,7 @@ if(empty($lang)){
 <!DOCTYPE html>
 <html lang="<?php echo $lang;?>">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $title ?></title>
 <meta name="description" content="<?php 
@@ -23,26 +24,33 @@ if(isset($pagecontent['metakeyword']))
 ?>" />
 <base href="<?php echo base_url();?>" />
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <?php print $this->bep_site->get_variables()?>
 <?php print $this->bep_assets->get_header_assets();?>
 <?php //print $this->kk_assets->get_header_assets();?>
 <?php print $this->bep_site->get_js_blocks()?>
 
-<!--[if IE]>
-<link href="<?php echo base_url();?>assets/css/ie.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-
-<!--[if IE 6]>
-<link href="<?php echo base_url();?>assets/css/ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-</head>
-<body class="no-js">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--></head>
+<body>
 <div id="container">
-  <?php $this->load->view($this->config->item('backendpro_template_shop') . 'header');?>
+<?php $this->load->view($this->config->item('backendpro_template_shop') . 'header');?>
+<?php $this->load->view($this->config->item('backendpro_template_shop') . 'menu');?>
 </div>
 <div id="wrapper">
-  <div class="inside">
-    <div id="main">
+<div class="inside">
+<div id="main">
 <?php 
 //   print displayStatus();
 print (isset($content)) ? $content : NULL; 
@@ -58,40 +66,19 @@ if( isset($page))
   }
 }
 ?>
-    </div><!--End of main-->
-    <div id="left"><!--Start of leftcol -->
-      <?php $this->load->view($this->config->item('backendpro_template_shop') . 'left');?>
-    </div><!--End of leftcol -->
+</div><!--End of main-->
+<?php $this->load->view($this->config->item('backendpro_template_shop') . 'left');?>
+<?php $this->load->view($this->config->item('backendpro_template_shop') . 'right');?>
 
-    <div id="right"><!--START RIGHT COLUMN -->
-      <?php $this->load->view($this->config->item('backendpro_template_shop') . 'right');?>
-    </div><!--End of rightcol-->
-  </div><!-- end of inside -->
-  <div id="footer">
-    <?php $this->load->view($this->config->item('backendpro_template_shop') . 'footer');?>
-  </div><!-- END of FOOTER  -->
+</div><!-- end of inside -->
+<div id="footer">
+<?php $this->load->view($this->config->item('backendpro_template_shop') . 'footer');?>
+</div><!-- END of FOOTER  -->
 </div><!--End of wrapper-->
-<!-- sharethis buttons -->
-<?php
 
-if ($this->preference->item('sharethis_pub_key'))
-{
-  $this->load->helper('sharethis');
-  echo '<div id="sthoverbuttons" class="sthoverbuttons-pos-left">';
-  echo sharethis();
-  echo "</div>";
-}
-
-?>
-<!-- end of sharethis -->
-<?php 
-print $this->bep_assets->get_footer_assets();
-// this will print all the js
-if ($this->preference->item('ga_tracking'))
-{
-  $this->load->view($this->config->item('backendpro_template_shop') . 'google_analytics');
-}
-?>
+<?php print $this->bep_assets->get_footer_assets();?>
+<?php  $this->load->view($this->config->item('backendpro_template_shop') . 'sharethis'); ?>
+<?php  $this->load->view($this->config->item('backendpro_template_shop') . 'google_analytics'); ?>
 
 </body>
 </html>
