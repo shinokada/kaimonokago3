@@ -1,6 +1,7 @@
 # Kaimonokago 3.0.1
 
 Multi-Languages Shopping Cart on CodeIgniter 2.1.0 and BackendPro 0.6.7
+
 PHP 5.3 compatible
 
 ## Features
@@ -29,8 +30,8 @@ PHP 5.3 compatible
 
 ## Installation
 
-- Create a database kaimonokago and import kaimonokago30.sql
-- Modify application/config/config.php and application/config/database.php accordingly.
+- You can find a dummy database called kaimonokago3.0.sql.dummy. Change this to kaimonokago3.0.sql. Then create a database kaimonokago and import kaimonokago30.sql
+- Modify application/config/config_original.php and application/config/database_original.php to application/config/config.php and application/config/database.php accordingly. Then change the contents of those files accordingly.
 - Change application/modules/recaptcha/config/recaptcha.php.original to recaptcha.php. Visit http://recaptcha.net/ to get your keys. If you need keys for your localhost, just add a newsite "localhost".
 
 The following folders and files must be writable or chmod 777. After installation please don’t forget checking and changing some of files, especially files in config directory, to 644.
@@ -43,14 +44,14 @@ The following folders and files must be writable or chmod 777. After installatio
     /var/www/kaimonokago/assets/js/plugins/ajaxfilemanager/session/
     /var/www/kaimonokago/assets/js/plugins/ajaxfilemanager/session/gc_counter.ajax.php
 
-Visit http://localhost/kaimonokago2.0
+Visit http://localhost/kaimonokago3.
 
-To log-in go to http://localhost/kaimonokago2.0/index.php/auth and change your username, email and password.
+To log-in go to http://localhost/kaimonokago3/index.php/auth and use the following email and password.
 
     login email: admin@gmail.com
     password: admin
 
-- Enter your public and private key to modules/recaptcha/config/recaptcha.php
+- Enter your public and private key to modules/recaptcha/config/recaptcha.php if you are using recaptcha
 
 Add password to the ajaxfilemanager assets/js/plugins/ajaxfilemanager/inc/config.base.php
 
