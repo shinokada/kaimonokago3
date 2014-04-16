@@ -112,12 +112,11 @@ After logged in, go to System->Settings->Website Configuration. Select 'Yes' in 
 - Click a status/tick icon to change the status.
 - Delete icon will be displayed. 
 
-## How to use Access Control
-
-- BackendPro: "http://www.kaydoo.co.uk/backendpro/user_guide/features/acl.html":http://www.kaydoo.co.uk/backendpro/user_guide/features/acl.html
-
 ## How to customize the template
 
 - There are two placed you need to look at. system/application/views/shop and modules/welcome/views/shop.
 - You need to tweak accordingly.
 
+## Must Dos
+
+- Integrate Bootstrap to front-end 
